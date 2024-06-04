@@ -1,1 +1,173 @@
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
 
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Contextualización 3.2 - Despliegue desde VSC al recurso Azure Function | Talleres</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Contextualización 3.2 - Despliegue desde VSC al recurso Azure Function" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="En esta sesión, se va a seguir el paso a paso para desplegar una Function desde Visual Studio Code al recurso del Portal" />
+<meta property="og:description" content="En esta sesión, se va a seguir el paso a paso para desplegar una Function desde Visual Studio Code al recurso del Portal" />
+<link rel="canonical" href="https://uniandesdsit.github.io/Talleres-IA/pages/context/Desplegar-Function.html" />
+<meta property="og:url" content="https://uniandesdsit.github.io/Talleres-IA/pages/context/Desplegar-Function.html" />
+<meta property="og:site_name" content="Talleres" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contextualización 3.2 - Despliegue desde VSC al recurso Azure Function" />
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Y-u39yWdBOt9_TkESpsJF9kmZce61VEtK8Tjru9bhw_wsgaVR_d8L53LR-5bEYpF8kK6QmNaMuzsbC8rz68gpsgkI2FPqHPkZkHx1GUCiJi1_0rhoZDfOFVTbGvO_maek_Gf0s1S8u8mJ5M2N08jbg" charset="UTF-8"></script><script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"En esta sesión, se va a seguir el paso a paso para desplegar una Function desde Visual Studio Code al recurso del Portal","headline":"Contextualización 3.2 - Despliegue desde VSC al recurso Azure Function","url":"https://uniandesdsit.github.io/Talleres-IA/pages/context/Desplegar-Function.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/Talleres-IA/assets/css/style.css?v=3fa330d40feee4e00b413b58dfe3ca2d0bf296c0">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/Talleres-IA/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Contextualización 3.2 - Despliegue desde VSC al recurso Azure Function</h1>
+      <h2 class="project-tagline">En esta sesión, se va a seguir el paso a paso para desplegar una Function desde Visual Studio Code al recurso del Portal</h2>
+      <!--
+      
+        <a href="https://github.com/UniandesDSIT/Talleres-IA" class="btn">View on GitHub</a>
+      
+      -->      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <p><a href="/Talleres-IA/">Inicio</a></p>
+
+<h3 id="paso-1-acceder-al-portal-de-azure">Paso 1: Acceder al Portal de Azure</h3>
+
+<ul>
+  <li>Abre un navegador web y ve a https://portal.azure.com.</li>
+  <li>Inicia sesión con la cuenta configurada previamente, en la sesión <a href="/Talleres-IA/pages/context/Habilitar-Cuenta-Estudiante.html">Cuenta Estudiante</a> o <a href="/Talleres-IA/pages/context/Habilitar-Cuenta-PagoPorUso.html">Cuenta Por Uso</a>.</li>
+</ul>
+
+<h3 id="paso-2-buscar-el-recurso-aplicación-de-funciones-o-azure-function">Paso 2: Buscar el recurso “Aplicación de Funciones” o “Azure Function”</h3>
+
+<ul>
+  <li>
+    <p>En el buscador que se encuentra en la parte superior digite “Aplicación de Funciones” o “Azure Function” y seleccione la opción como se muestra en la siguiente imagen para acceder al recurso:</p>
+
+    <p><img src="/Talleres-IA/assets/images/AzureFunction1-Buscar.png" alt="buscar" /></p>
+  </li>
+</ul>
+
+<h3 id="paso-3-ingresar-a-la-azure-function-creada-previamente">Paso 3: Ingresar a la Azure Function creada previamente</h3>
+
+<ul>
+  <li>
+    <p>De clic sobre el nombre de la Function creada:</p>
+
+    <p><img src="/Talleres-IA/assets/images/T3-34-IngAzureFunction.png" alt="IngAzureFunction" /></p>
+  </li>
+</ul>
+
+<h3 id="paso-4-ingresar-a-la-azure-function-creada-previamente">Paso 4: Ingresar a la Azure Function creada previamente</h3>
+
+<ul>
+  <li>
+    <p>En el menu lateral izquierdo busque el opción “Variables de entorno” y de clic:</p>
+
+    <p><img src="/Talleres-IA/assets/images/VariablesEnt.png" alt="IngAzFunConf" /></p>
+  </li>
+</ul>
+
+<h3 id="paso-5-ingresar-variables-de-entorno">Paso 5: Ingresar variables de entorno</h3>
+
+<ul>
+  <li>
+    <p>En el menu de configuración de clic en “Nueva configuración de la aplicación” o “Add application setting”:</p>
+
+    <p><img src="/Talleres-IA/assets/images/AddVarEnt.png" alt="AddVarEnt" /></p>
+  </li>
+  <li>
+    <p>Ahora en el campo Nombre digite: “AzureWebJobsFeatureFlags” y en el campo Valor digite: “EnableWorkerIndexing”. De Clic en el boton “Aplicar”.</p>
+
+    <p><img src="/Talleres-IA/assets/images/WriteVarEnt.png" alt="AddOneVarEnt" /></p>
+  </li>
+  <li>
+    <p>Debe poder visualizar la variable de entorno en el menú. Luego, de clic en el boton inferior “Apply”:</p>
+
+    <p><img src="/Talleres-IA/assets/images/ApplyVarEnt.png" alt="ViewOneVarEnt" /></p>
+  </li>
+  <li>
+    <p>Por último, confirme los cambios:
+  <img src="/Talleres-IA/assets/images/ConfirmVarEnt.png" alt="SaveChanges" /></p>
+  </li>
+</ul>
+
+<h3 id="paso-6-inicie-sesión-desde-visual-studio-code-con-la-cuenta-de-azure">Paso 6: Inicie Sesión desde Visual Studio Code con la Cuenta de Azure</h3>
+
+<ul>
+  <li>
+    <p>En VSC presione la tecla F1 y en la barra de busqueda que se habilita en la parte superior digite “Azure: Sign In” y de clic:</p>
+
+    <p><img src="/Talleres-IA/assets/images/T3-38-AzureSignIn.png" alt="AzureSignIn" /></p>
+  </li>
+  <li>
+    <p>Inicie Sesión con la cuenta configurada previamente en la sesión <a href="/Talleres-IA/pages/context/Habilitar-Cuenta-Estudiante.html">Cuenta Estudiante</a> o <a href="/Talleres-IA/pages/context/Habilitar-Cuenta-PagoPorUso.html">Cuenta Por Uso</a></p>
+  </li>
+  <li>
+    <p>Ahora seleccione la suscripción que se creo previamente, en el caso del ejemplo es “Susc-Dev-Sol-IA-CDAV”:</p>
+
+    <p><img src="/Talleres-IA/assets/images/T3-39-SelectSus.png" alt="SelectSus" /></p>
+  </li>
+</ul>
+
+<h3 id="paso-7-despliegue-de-la-function-al-portal-azure">Paso 7: Despliegue de la Function al Portal Azure</h3>
+
+<ul>
+  <li>
+    <p>En VSC presione la tecla F1 y en la barra de busqueda que se habilita en la parte superior digite “Azure Functions: Deploy to Function App” y de clic:</p>
+
+    <p><img src="/Talleres-IA/assets/images/T3-40-deployFA.png" alt="deployFA" /></p>
+  </li>
+  <li>
+    <p>Ahora seleccione la Function que se creo previamente, donde se va a realizar el despliegue. En el caso del ejemplo es “FA-Dev-Sol-IA-CDAV”. Luego, confirme el despliegue:</p>
+
+    <p><img src="/Talleres-IA/assets/images/T3-41-SelectFA.png" alt="SelectFA" /></p>
+  </li>
+  <li>
+    <p>En la parte inferior saldra la siguiente notificación, de clic en “output window”:</p>
+
+    <p><img src="/Talleres-IA/assets/images/T3-42-Notification.png" alt="Notification" /></p>
+  </li>
+  <li>
+    <p>Espere a que finalice el despliegue, si el despliegue se ejecutó correctamente, se debe visualizar el o los endpoint.</p>
+  </li>
+</ul>
+
+<h3 id="paso-8-consumir-servicio-desde-postman">Paso 8: Consumir Servicio desde Postman</h3>
+
+<ul>
+  <li>Copie la url que se genero en el despliegue y envie lá petición desde Postman.</li>
+</ul>
+
+<p><a href="/Talleres-IA/">Inicio</a></p>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
